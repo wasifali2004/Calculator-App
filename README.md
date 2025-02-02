@@ -5,7 +5,7 @@ Description
 A simple calculator that performs basic arithmetic operations: addition, subtraction, multiplication, and division.
 
 Features
-Basic arithmetic operations
+Basic arithmetic operations.
 User-friendly interface
 Error handling for invalid inputs
 
