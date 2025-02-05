@@ -1,68 +1,100 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-    background: rgb(45, 22, 69);
-}
-
-.calculator {
-    height: 100vh;
-    width: 100%;
+body {
+    background: black; /* Simple solid background */
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
-.box {
-    background: violet;
-    border-radius: 10px;
-    padding: 20px   ;
+.calculator {
+    width: 320px;
+    background: black;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 20px;
 }
 
-.box form input {
-    height: 60px;
-    width: 60px;
-    margin: 3px;
-    border-radius: 10px;
-    outline: 0;
-    border: 2px solid rgb(74, 54, 74);
-    color: black;
-    font-weight: 700;
-    font-size: 18px;
-    box-shadow: 5px -5px 5px rgb(75, 75, 48);
-    cursor: pointer;
-    background: transparent;
-
+.box form {
+    display: flex;
+    flex-direction: column;
 }
 
-.box form .equal {
-    width: 130px;
-}
-
-.box form input:hover {
-    color: white;
-    background-color: violet;
-}
-
-.box form .inp input:hover {
-    background-color: white;
-
-    cursor: auto;
-}
-
+/* Simple Result Display */
 .box form .inp {
     display: flex;
     justify-content: flex-end;
-    margin: 20px 0;
+    align-items: center;
+    height: 80px;
     background: white;
-    border-radius: 20px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .box form .inp input {
-    text-align: end;
     flex: 1;
-    color: black;
+    font-size: 36px;
+    text-align: right;
     border: none;
-    box-shadow: none;
+    background: transparent;
+    color: black;
+    outline: none;
+}
+
+/* Button Layout */
+.box form div {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+/* Buttons Styling */
+.box form input {
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+/* Button Hover Effect */
+.box form input:hover {
+    filter: brightness(120%);
+}
+
+/* Button Colors */
+.box form .Clear, .box form .Del {
+    background: #A5A5A5;
+    color: black;
+}
+
+.box form .Dot, .box form .zero, .box form .doublezero, 
+.box form .one, .box form .two, .box form .three, 
+.box form .four, .box form .five, .box form .six, 
+.box form .seven, .box form .eight, .box form .nine {
+    background: #333;
+    color: white;
+}
+
+.box form .Slash, .box form .mul, .box form .add, 
+.box form .minus, .box form .equal {
+    background: #FF9500;
+    color: white;
+}
+
+/* Make "=" button bigger */
+.box form .equal {
+    width: 150px;
+    border-radius: 35px;
 }
