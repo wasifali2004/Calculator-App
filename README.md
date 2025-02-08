@@ -5,8 +5,8 @@ A simple calculator that performs basic arithmetic operations: addition, subtrac
 
 Features
 Basic arithmetic operations.
-User-friendly interface
-Error handling for invalid inputs
+User-friendly interface.
+Error handling for invalid inputs.
 
 Installatin
 Clone the repository:
